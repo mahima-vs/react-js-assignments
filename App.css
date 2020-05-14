@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  border: 10px;
+  background-color: lightgrey;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  margin-right: 580px;
+  margin-left: 560px;
+  height: 200px;
+}
+
+.Name {
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+.Password {
+  margin-top: 10px;
+  margin-right: 30px;
+}
+
+.Button {
+  margin-top: 15px;
+  margin-right: 110px;
+}
+
+.Button2 {
+  margin-left: 30px;
+}
+
+.Input{
+  margin-left: 25px;
+}
+
+.Input2{
+  margin-left: 5px;
+}
