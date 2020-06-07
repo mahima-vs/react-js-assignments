@@ -1,68 +1,58 @@
 import './App.css';
 import Button from './button/Button';
-import InputLabel from './inputLabelController/InputLabel';
-import React from 'react';
+import React, { Component } from 'react';
 
-const data = [{
-  name: 'Name',
-  id: '123'
-},
-{
-  name: 'Password',
-  id: '456'
-}]
 
-const buttonData = [{
-  name: 'Reset',
-  id: '789'
-},
-{
-  name: 'Submit',
-  id: '111'
-}]
+/**
+ * Calculator App
+ */
+const style = {
+  flex: 1,
+  color: 'white',
+  outline: '1px solid  rgb(86, 86, 89)',
+  borderWidth: '0px'
+}
 
-class App extends React.Component {
+class App extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      nameValue: '',
-      passwordValue: '',
-      value: ''
-    }
-    this.onChangeText = this.onChangeText.bind(this)
-    this.onButtonClick = this.onButtonClick.bind(this)
-  }
+  state = {value : 0};
 
-  // Triggered on press of a button
-  onButtonClick() {
-    this.setState((state) => ({
-      value: state.nameValue
-    }));
-  }
-
-  // Triggered when there is a change in input element
-  onChangeText(event, inputName) {
-    inputName === 'Name' ? this.setState({ nameValue: event.target.value }) : this.setState({ passwordValue: event.target.value })
-  }
-
-  render() {
+  render(){
     return (
-      <div className="App">
-        <label> Login </label>
-        {data.map(({name, id}) => {
-          return (
-            <InputLabel labelName={name} inputName={name} key={id} onChange={(event) => this.onChangeText(event, name)} />
-          )
-        })}
-        {buttonData.map(({name, id}) => {
-          return (<Button buttonName={name} key={id} onClick={this.onButtonClick} />)
-        })
-        }
-        <div>
-          <label> {this.state.value} </label>
+      <section>
+        <div className = "inputDiv"> 
+        <input type = "text" value = {this.state.value} />
         </div>
-      </div>
+        <div className = "div1">
+        <Button buttonName = "AC" style = {style}/>
+        <Button buttonName = "+/-"  style = {style} />
+        <Button buttonName = "%"  style = {style}/>
+        <Button buttonName = "/"  style = {style} />
+        </div>
+         <div className = "div1">
+        <Button buttonName = "7"  style = {style}/>
+        <Button buttonName = "8"  style = {style}/>
+        <Button buttonName = "9"  style = {style}/>
+        <Button buttonName = "*"  style = {style}/>
+        </div>
+        <div className = "div1">
+        <Button buttonName = "4"  style = {style}/>
+        <Button buttonName = "5"  style = {style}/>
+        <Button buttonName = "6"  style = {style}/>
+        <Button buttonName = "-"  style = {style}/>
+        </div>
+        <div className = "div1">
+        <Button buttonName = "1"  style = {style}/>
+        <Button buttonName = "2"  style = {style}/>
+        <Button buttonName = "3"  style = {style}/>
+        <Button buttonName = "+"  style = {style}/>
+        </div>
+        <div className = "div1">
+        <Button buttonName = "0" style = {{ width: '50%', color: 'white', borderWidth: '0px'}}/>
+        <Button buttonName = "."  style = {style}/>
+        <Button buttonName = "="  style = {style}/>
+        </div>
+      </section>
     )
   }
 }

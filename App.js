@@ -1,35 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Button from "./src/button/Button";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <label> Login </label>
-      <div className="Name">
-        <label>
-          Name
-      </label>
-        <input type="text" placeholder="Name" class="Input" />
-      </div>
+/**
+ * Calculator App
+ */
+  class App extends Component {
 
-      <div className="Password">
-        <label>
-          Password
-      </label>
-        <input type="text" placeholder="Password" class="Input2" />
-      </div>
+    state = {value : 0};
 
-      <div className="Button" >
-        <button onClick={() => console.log("Reset pressed")}>
-          Reset
-      </button >
-        <button className="Button2" onClick={() => console.log("Submit pressed")}>
-          Submit
-      </button>
-      </div>
-
-    </div>
-  );
+    render(){
+      return (
+        <section>
+          <input type = "text" value = {this.state.value}> </input>
+          <div>
+          <Button buttonName = "AC"/>
+          <Button buttonName = "+/-"/>
+          <Button buttonName = "%"/>
+          <Button buttonName = "/"/>
+          </div>
+        
+        </section>
+      )
+    }
 }
 
 export default App;

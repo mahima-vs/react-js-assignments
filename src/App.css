@@ -1,12 +1,31 @@
-.App {
-  background-color: lightgrey;
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  border: 10px;
+section {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
   height: 200px;
-  margin-left: 560px;
-  margin-right: 580px;
-  text-align: center;
-  width: 250px;
+  width: 123px;
+  margin-left: 80px;
+  margin-top: 20px;
+  border-radius: 3px;
+}
+
+/* buttons div  */
+.div1 {
+  display: flex;
+  outline: 1px solid  rgb(86, 86, 89);
+  flex: 1;
+}
+
+.inputDiv {
+  display: flex;
+}
+
+input[type=text] {
+  flex: 1;
+  width: 100%;
+  background-color: rgb(85, 85, 87);
+  text-align: end;
+  color: white;
+  border: 0px;
+  height: 20px;
 }
