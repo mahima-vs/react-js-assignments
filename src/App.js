@@ -3,9 +3,7 @@ import Button from './button/Button';
 import React, { Component } from 'react';
 
 
-/**
- * Calculator App
- */
+
 const style = {
   flex: 1,
   color: 'white',
@@ -13,6 +11,9 @@ const style = {
   borderWidth: '0px'
 }
 
+/**
+ * Calculator App
+ */
 class App extends Component {
 
   state = {value : 0};
