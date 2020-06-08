@@ -1,59 +1,60 @@
 import './App.css';
-import Button from './button/Button';
 import React, { Component } from 'react';
-
-
-
-const style = {
-  flex: 1,
-  color: 'white',
-  outline: '1px solid  rgb(86, 86, 89)',
-  borderWidth: '0px'
-}
+import userIcon from './user.png';
+import addUserIcon from './add-user.png';
+import lock from './lock.png';
+import mail from './mail.jpg';
 
 /**
- * Calculator App
+ * Modal Assignment
  */
+
 class App extends Component {
 
-  state = {value : 0};
+  state = {
+    modalVisible : false
+  }
+  
+  // TODO: Conditional rendering left for main div - Login/Register
+  render () {
+    return  (
+      <div>
+         <div class = "modalDiv">
+        <button className = "modalButton" onClick = {{}}> LAUNCH MODAL LOGIN/REGISTER </button>
+        </div>
+         <section>
+        <div className = "mainDiv1" >
+        <img className = "img"  src= {userIcon} alt="User Icon" />
+        <button className = "mainDivButton"> Login </button>
+        <img className = "img"  src= {addUserIcon} alt="User Icon" />
+        <text className= "register"> Register </text>
+        
+        </div>
+        <div > 
+        <div className = "inputDiv">
+        <img className = "mailImg" src= {mail} alt="User Icon" />
+        <input placeholder = "Your email" />
+        </div>
+        
+        <img className = "lockImg"  src= {lock} alt="User Icon" />
+        <input placeholder = "Your password" />
 
-  render(){
-    return (
-      <section>
-        <div className = "inputDiv"> 
-        <input type = "text" value = {this.state.value} />
+        <div className = "loginInButton"> <button className = "loginIn"> LOG IN </button></div>
+        <hr />
         </div>
-        <div className = "div1">
-        <Button buttonName = "AC" style = {style}/>
-        <Button buttonName = "+/-"  style = {style} />
-        <Button buttonName = "%"  style = {style}/>
-        <Button buttonName = "/"  style = {style} />
+        <div class = "mailDiv2"> 
+        <div className = "signUp">
+          <text> Not a member?  </text> 
+          <text className = "text" onClick = {{}}> Sign Up </text>
         </div>
-         <div className = "div1">
-        <Button buttonName = "7"  style = {style}/>
-        <Button buttonName = "8"  style = {style}/>
-        <Button buttonName = "9"  style = {style}/>
-        <Button buttonName = "*"  style = {style}/>
+        <div className = "forgotPassword">
+        <text> Forgot </text> 
+        <text className = "text" onClick = {{}}> Password? </text>
         </div>
-        <div className = "div1">
-        <Button buttonName = "4"  style = {style}/>
-        <Button buttonName = "5"  style = {style}/>
-        <Button buttonName = "6"  style = {style}/>
-        <Button buttonName = "-"  style = {style}/>
+        <button className = "closeButton">  CLOSE </button>
         </div>
-        <div className = "div1">
-        <Button buttonName = "1"  style = {style}/>
-        <Button buttonName = "2"  style = {style}/>
-        <Button buttonName = "3"  style = {style}/>
-        <Button buttonName = "+"  style = {style}/>
-        </div>
-        <div className = "div1">
-        <Button buttonName = "0" style = {{ width: '50%', color: 'white', borderWidth: '0px'}}/>
-        <Button buttonName = "."  style = {style}/>
-        <Button buttonName = "="  style = {style}/>
-        </div>
-      </section>
+        </section>
+         </div>
     )
   }
 }

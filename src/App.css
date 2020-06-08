@@ -1,31 +1,138 @@
 section {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  height: 200px;
-  width: 123px;
+  border: 1px solid whitesmoke;
+  height: 250px;
+  width: 300px;
   margin-left: 80px;
   margin-top: 20px;
   border-radius: 3px;
+  box-shadow: 5px 10px whitesmoke;
 }
 
-/* buttons div  */
-.div1 {
-  display: flex;
-  outline: 1px solid  rgb(86, 86, 89);
-  flex: 1;
+
+input {
+  border:0px;
+  border-bottom: 1px solid grey;
+  width: 250px;
+  margin-left: 25px;
+  margin-top: 20px;
 }
 
-.inputDiv {
-  display: flex;
+.modalDiv {
+  margin-top: 10px;
+  margin-left: 150px;
 }
 
-input[type=text] {
-  flex: 1;
-  width: 100%;
-  background-color: rgb(85, 85, 87);
-  text-align: end;
+.modalButton {
+  background-color: darkgreen;
+  color: white;
+  width: 200px;
+  height: 30px;
+  border: 1px;
+  border-radius: 20px;
+}
+
+.mainDiv1{
+  background-color: darkblue;
+  position: absolute;
+  top: 50px;
+  width: 280px;
+  margin-left: 10px;
+  height: 30px;
+}
+
+.register {
+  color: white;
+  margin-left: 50px;
+}
+
+.img {
+  width: 10px;
+  height: 10px;
+  margin-left: 40px;
+  position: absolute;
+  margin-top: 6px;
+  color: white;
+}
+
+.mailImg {
+  width: 15px;
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 3px;
+}
+
+.lockImg {
+  width: 15px;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 3px;
+}
+
+.mainDivButton {
+  margin-left: 10px;
+  width: 120px;
+  background-color: blue;
   color: white;
   border: 0px;
-  height: 20px;
 }
+
+.text {
+  color: lightskyblue
+}
+
+.closeButton {
+  color: lightskyblue;
+  border-color: lightskyblue;
+  border-width: 2px;
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  top: 260px;
+  left: 300px; 
+}
+
+.loginInButton  {
+  display: flex;
+  justify-content: center;
+  border: 0px;
+}
+
+inputDiv {
+  margin: 0;
+  border-width: 0px;
+  margin-top: 50px;
+}
+
+hr {
+  border: 0;
+  width: 300px;
+  border-bottom: 1px solid grey;
+  margin-top: 20px;
+}
+
+.loginIn {
+  /* display: flex; */
+  background-color: lightskyblue;
+  justify-content: center;
+  align-self: center;
+  width: 70px;
+  height: 40px;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  border: 0px;
+}
+
+.signUp {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.forgotPassword{
+  margin-left: 40px;
+  margin-top: 8px;
+}
+
+  
